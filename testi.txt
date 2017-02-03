@@ -9,5 +9,6 @@ Apple lopetti Thunderbolt-näyttöjensä valmistuksen viime vuonna, ja nyt yhti�
 Apple lopetti Thunderbolt-näyttöjensä valmistuksen viime vuonna, ja nyt yhtiö suosittelee korvaajaksi LG:n 27-tuumaista UltraFine 5K -näyttöä (erikoishinta 1049 euroa Applen verkkokaupassa). 9to5Macin mukaan kyseessä on hyvä laite - kunhan et vie sitä reitittimen viereen.<p>
 
 <p>tätä on käyty ropeloimassa</p>
+newfeatute muokkaus.
 
 >>>>>>> newfeatute
