@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+﻿<<<<<<< HEAD
 <h1>Yli 1000 euroa maksava huippunäyttö - yksi pikkujuttu tekee siitä käyttökelvottoman<h1>
 
 <p>
@@ -11,5 +11,7 @@ Apple lopetti Thunderbolt-näyttöjensä valmistuksen viime vuonna, ja nyt yhti�
 <p>tätä on käyty ropeloimassa</p>
 newfeatute muokkaus.
 Testing  123
+
+Juha testasi tätä kotona.
 
 >>>>>>> newfeatute
