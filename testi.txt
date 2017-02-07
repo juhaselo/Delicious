@@ -10,5 +10,6 @@ Apple lopetti Thunderbolt-näyttöjensä valmistuksen viime vuonna, ja nyt yhti�
 
 <p>tätä on käyty ropeloimassa</p>
 newfeatute muokkaus.
+Testing  123
 
 >>>>>>> newfeatute
