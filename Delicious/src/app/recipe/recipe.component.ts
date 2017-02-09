@@ -8,17 +8,17 @@ import {FoodService} from "../services/food.service";
 })
 export class RecipeComponent implements OnInit {
 
-  constructor(/*private foodService = FoodService*/) {
+  constructor(private foodService = FoodService) {
     }
   private meal: any[];
 
 
   ngOnInit() {
 
-    /*this.foodService.makeFood()
+    this.foodService.makeFood()
       .subscribe((res) => {
           console.log(res);}
-      ) */
+      )
 
 
   }
