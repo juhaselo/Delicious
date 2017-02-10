@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {FoodService} from "./services/food.service";
 import { RecipeComponent } from './recipe/recipe.component';
+import { IngredientsComponent } from './ingredients/ingredients.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RecipeComponent
+    RecipeComponent,
+    IngredientsComponent
   ],
   imports: [
     BrowserModule,
