@@ -17,3 +17,4 @@ Juha testasi tätä kotona.
 >>>>>>> newfeatute
 
 Tämä on testi 10.2.2017
+Toimii...
