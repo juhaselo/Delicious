@@ -1,4 +1,4 @@
-﻿<<<<<<< HEAD
+<<<<<<< HEAD
 <h1>Yli 1000 euroa maksava huippunäyttö - yksi pikkujuttu tekee siitä käyttökelvottoman<h1>
 
 <p>
@@ -15,3 +15,5 @@ Testing  123
 Juha testasi tätä kotona.
 
 >>>>>>> newfeatute
+
+Tämä on testi 10.2.2017
