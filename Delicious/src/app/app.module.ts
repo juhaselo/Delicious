@@ -8,6 +8,25 @@ import {FoodService} from "./services/food.service";
 import { RecipeComponent } from './recipe/recipe.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 
+/*
+const recipeConfig = [
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'mainpage'
+  },
+  {
+    path: 'recipe',
+    component:
+  },
+  {
+    path: 'search',
+    component:
+  }
+];
+
+*/
+
 @NgModule({
   declarations: [
     AppComponent,

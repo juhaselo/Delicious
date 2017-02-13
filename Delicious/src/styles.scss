@@ -1,2 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/bootstrap/scss/bootstrap';
+
+body {
+  font-family: 'Droid Sans', sans-serif;
+ background-color: #f1f6eb;
+  font-size: 16px;
+  //background-color: #eaeeba;
+  //background-color: #32d69a;
+  //background-color: #015f57;
+
+}
+
+.container{
+  background-color: #eaeeba;
+}
+
+#logo{
+  height: 140px;
+  width: 140px;
+}
+
+#food-img{
+  height: 300px;
+  width: 300px;
+}
+
+#nav1{
+  background-color: #015f57;
+}
+
+#nav1-link-color{
+  color: #f1f6eb;
+}
+
+#link-wrap {
+  white-space: pre-line;
+  width: 300px;
+}
+/*#nav2{
+  background-color: #32d69a;
+}*/
+.button {
+  background-color: #f1f6eb;
+  border: 2px solid #32d69a;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 4px;
+  margin-top: 10px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #32d69a;
+  color: #f1f6eb;
+}
+
+.footer{
+  background-color: #015f57;
+  padding: 15px 0px 3px 0px;
+  color: #f1f6eb;
+  text-align: center;
+}
+
+
+/*Colors in Palette
+
+Color Hex RGB
+
+#f1f6eb
+#eaeeba
+#32d69a
+#015f57
+#11032d
+*/

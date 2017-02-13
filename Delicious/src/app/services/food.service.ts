@@ -16,7 +16,7 @@ export class FoodService {
     params.set('fillIngredients', 'false');
     params.set('ingredients', aineet);
     params.set('limitLicense', 'false');
-    params.set('number', '5');
+    params.set('number', '24');
     params.set('ranking', '1');
 
     const headers = new Headers({

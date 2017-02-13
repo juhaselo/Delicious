@@ -1,3 +1,20 @@
-<ul *ngFor="let resepti of recipes">
+<!--<ul *ngFor="let resepti of recipes">
   <li><a [href]="resepti.url" target="_blank">{{ resepti.title }}</a></li>
+</ul>
+-->
+
+<ul *ngFor="let resepti of recipes">
+  <li style="list-style-type: none">
+    <div class="row">
+      <div class="col">
+        <img class="img-fluid" id="food-img" src="{{ resepti.image }}">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <a [href]="resepti.url" id="link-wrap" target="_blank">{{ resepti.title }}</a>
+      </div>
+    </div>
+
+  </li>
 </ul>
