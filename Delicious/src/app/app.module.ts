@@ -41,7 +41,6 @@ const recipeConfig = [
   ];
  /* mainpage search fridge list register login */
 
-*/
 
 
 @NgModule({
