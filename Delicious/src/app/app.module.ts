@@ -16,16 +16,33 @@ const recipeConfig = [
     redirectTo: 'mainpage'
   },
   {
-    path: 'recipe',
+    path: 'search',
     component:
   },
   {
-    path: 'search',
+    path: 'fridge',
     component:
-  }
-];
+  },
+
+ {
+ path: 'list',
+ component:
+ },
+ {
+ path: 'login',
+ component:
+ },
+
+ {
+ path: 'register',
+ component:
+ }
+
+  ];
+ /* mainpage search fridge list register login */
 
 */
+
 
 @NgModule({
   declarations: [
@@ -42,3 +59,6 @@ const recipeConfig = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+

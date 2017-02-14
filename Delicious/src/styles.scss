@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/bootstrap/scss/bootstrap';
 
+
 body {
   font-family: 'Droid Sans', sans-serif;
  background-color: #f1f6eb;
@@ -11,7 +12,11 @@ body {
 
 }
 
+//$tausta=#eaeeba;
+
+
 .container{
+  //background-color: darken($tausta,10%);
   background-color: #eaeeba;
 }
 
