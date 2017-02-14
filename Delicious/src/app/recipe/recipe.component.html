@@ -3,6 +3,7 @@
 </ul>
 -->
 
+<<<<<<< HEAD
 
 
 <ul *ngFor="let resepti of recipes">
@@ -14,3 +15,31 @@
 
 
 
+=======
+<!--<ul *ngFor="let resepti of recipes">
+  <li style="list-style-type: none">
+    <div class="row">
+      <div class="col">
+        <img class="img-fluid" id="food-img" src="{{ resepti.image }}">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p id="link-wrap"><a [href]="resepti.url" target="_blank">{{ resepti.title }}</a></p>
+      </div>
+    </div>
+
+  </li>
+</ul>-->
+
+<div class="flex-container">
+  <div class="flex-item" *ngFor="let resepti of recipes">
+    <figure>
+      <img class="img-fluid" id="food-img" src="{{ resepti.image }}">
+      <figcaption>
+        <p id="link-wrap"><a [href]="resepti.url" target="_blank">{{ resepti.title }}</a></p>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+>>>>>>> 2a3a0134e9e91d01b30f9add7e23c7ad384dcb36
