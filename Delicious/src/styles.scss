@@ -26,8 +26,8 @@ body {
 }
 
 #food-img{
-  height: 200px;
-  width: 200px;
+  height: 231px;
+  width: 312px;
 }
 
 #nav1{
@@ -38,10 +38,6 @@ body {
   color: #f1f6eb;
 }
 
-#link-wrap {
-  word-wrap: break-word;
-  width: 200px;
-}
 /*#nav2{
   background-color: #32d69a;
 }*/
@@ -82,14 +78,34 @@ body {
 .flex-item {
   flex-grow: 1;
   flex-shrink: 0;
-  flex-basis: 200px;
+  flex-basis: 250px;
   justify-content: flex-start;
   display: flex;
 }
 .flex-item img {
   cursor: pointer;
 }
+figure {
+  margin: .5em;
+  position: relative;
+}
 
+figcaption {
+  display: none;
+}
+
+figure:hover > figcaption {
+  display: block;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  background-color: rgba(255,255,255,0.7);
+}
+
+figcaption p {
+  margin: 0;
+  text-align: center;
+}
 
 /*Colors in Palette
 Color Hex RGB
