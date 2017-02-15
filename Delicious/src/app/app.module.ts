@@ -7,6 +7,10 @@ import { AppComponent } from './app.component';
 import {FoodService} from "./services/food.service";
 import { RecipeComponent } from './recipe/recipe.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { Navbar2Component } from './navbar-2/navbar-2.component';
+import { FooterComponent } from './footer/footer.component';
+import { Navbar3Component } from './navbar-3/navbar-3.component';
 
 /*
 const recipeConfig = [
@@ -38,7 +42,7 @@ const recipeConfig = [
  component:
  }
 
-  ];
+  ]; */
  /* mainpage search fridge list register login */
 
 
@@ -47,7 +51,11 @@ const recipeConfig = [
   declarations: [
     AppComponent,
     RecipeComponent,
-    IngredientsComponent
+    IngredientsComponent,
+    NavbarComponent,
+    Navbar2Component,
+    FooterComponent,
+    Navbar3Component
   ],
   imports: [
     BrowserModule,
