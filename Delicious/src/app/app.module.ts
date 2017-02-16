@@ -11,40 +11,34 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { Navbar2Component } from './navbar-2/navbar-2.component';
 import { FooterComponent } from './footer/footer.component';
 import { Navbar3Component } from './navbar-3/navbar-3.component';
-import { RecipeSearchComponent } from './recipe-search/recipe-search.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { MainComponent } from './main/main.component';
+import {RouterModule} from "@angular/router";
 
-/*
-const recipeConfig = [
+
+const menuConfig = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'mainpage'
+    redirectTo: 'main'
   },
   {
-    path: 'search',
-    component:
+    path: 'main',
+    component:MainComponent
+  }
+  ,
+  {
+    path: 'login',
+    component:LoginComponent
   },
   {
-    path: 'fridge',
-    component:
-  },
+    path: 'register',
+    component: RegisterComponent
+  }
+];
 
- {
- path: 'list',
- component:
- },
- {
- path: 'login',
- component:
- },
-
- {
- path: 'register',
- component:
- }
-
-  ]; */
- /* mainpage search fridge list register login */
+/* mainpage search fridge list register login */
 
 
 
@@ -57,17 +51,17 @@ const recipeConfig = [
     Navbar2Component,
     FooterComponent,
     Navbar3Component,
-    RecipeSearchComponent
+    LoginComponent,
+    RegisterComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(menuConfig)
   ],
   providers: [FoodService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
-
