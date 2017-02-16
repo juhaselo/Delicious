@@ -13,9 +13,9 @@ export class FoodService {
   getRecipe = (aineet: string) => {
 
     const params: URLSearchParams = new URLSearchParams();
-    params.set('fillIngredients', 'false');
+    params.set('fillIngredients', 'true');
     params.set('ingredients', aineet);
-    params.set('limitLicense', 'false');
+    params.set('limitLicense', 'true');
     params.set('number', '24');
     params.set('ranking', '1');
 
