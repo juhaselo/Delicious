@@ -14,6 +14,7 @@ import { Navbar3Component } from './navbar-3/navbar-3.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MainComponent } from './main/main.component';
+import {RecipeSearchComponent} from './recipe-search/recipe-search.component';
 import {RouterModule} from "@angular/router";
 
 
@@ -35,6 +36,10 @@ const menuConfig = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'search',
+    component: RecipeSearchComponent
   }
 ];
 
@@ -53,7 +58,8 @@ const menuConfig = [
     Navbar3Component,
     LoginComponent,
     RegisterComponent,
-    MainComponent
+    MainComponent,
+    RecipeSearchComponent
   ],
   imports: [
     BrowserModule,
