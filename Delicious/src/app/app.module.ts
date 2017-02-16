@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { Navbar2Component } from './navbar-2/navbar-2.component';
 import { FooterComponent } from './footer/footer.component';
 import { Navbar3Component } from './navbar-3/navbar-3.component';
+import { RecipeSearchComponent } from './recipe-search/recipe-search.component';
 
 /*
 const recipeConfig = [
@@ -55,7 +56,8 @@ const recipeConfig = [
     NavbarComponent,
     Navbar2Component,
     FooterComponent,
-    Navbar3Component
+    Navbar3Component,
+    RecipeSearchComponent
   ],
   imports: [
     BrowserModule,
