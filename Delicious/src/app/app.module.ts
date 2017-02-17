@@ -1,3 +1,4 @@
+import { SearchComponent } from './search/search.component'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -15,7 +16,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MainComponent } from './main/main.component';
 import {RouterModule} from "@angular/router";
-
+import { FridgeComponent } from './fridge/fridge.component';
+import { ListComponent } from './list/list.component';
+import { OwnComponent } from './own/own.component';
 
 const menuConfig = [
   {
@@ -33,8 +36,20 @@ const menuConfig = [
     component:LoginComponent
   },
   {
-    path: 'register',
-    component: RegisterComponent
+    path: 'fridge',
+    component: FridgeComponent
+  },
+  {
+    path: 'search',
+    component: SearchComponent
+  },
+  {
+    path: 'list',
+    component: ListComponent
+  },
+  {
+    path: 'own',
+    component: OwnComponent
   }
 ];
 
@@ -53,7 +68,11 @@ const menuConfig = [
     Navbar3Component,
     LoginComponent,
     RegisterComponent,
-    MainComponent
+    MainComponent,
+    FridgeComponent,
+    SearchComponent,
+    ListComponent,
+    OwnComponent
   ],
   imports: [
     BrowserModule,
