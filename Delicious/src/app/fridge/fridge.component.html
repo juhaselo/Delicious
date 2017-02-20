@@ -1,3 +1,26 @@
-<p>
-  fridge works!
-</p>
+<div class="row">
+  <div class="col">
+    <h1>What ingredients you have to make meal ?</h1>
+
+    <h2>What's in a fridge ?</h2>
+    <input type="text" [(ngModel)]="ingredient">
+    <input type="text" [(ngModel)]="ingredient2">
+    <input type="text" [(ngModel)]="ingredient3">
+    <button>Search</button>
+
+
+
+  </div>
+
+</div>
+
+<div class="flex-container">
+  <div class="flex-item" *ngFor="let resepti of recipes">
+    <figure>
+      <img class="img-fluid" id="food-img" src="{{ resepti.image }}">
+      <figcaption>
+        <p id="link-wrap"><a [href]="resepti.url" target="_blank">{{ resepti.title }}</a></p>
+      </figcaption>
+    </figure>
+  </div>
+</div>
