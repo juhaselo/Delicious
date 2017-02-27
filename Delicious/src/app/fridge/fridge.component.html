@@ -1,30 +1,22 @@
 <div class="col">
   <div class="row">
     <div class="col">
-      <h1>What ingredients you have to make meal ?</h1>
+      <h3>What ingredients you have to make meal ?</h3>
 
-      <h2>What's in a fridge ?</h2>
-      <input type="text" [(ngModel)]="ingredient">
-      <input type="text" [(ngModel)]="ingredient2">
-      <input type="text" [(ngModel)]="ingredient3">
+      <h4>What's in a fridge ?</h4>
+      ingredient<input type="text" [(ngModel)]="ingredient">
+      <br>
+      ingredient<input type="text" [(ngModel)]="ingredient2">
+      <br>
+      ingredient<input type="text" [(ngModel)]="ingredient3">
+      <br>
       <button (click)="getFridgefood()">Search</button>
 
     </div>
     <div class="row">
       <div class="col">
 
-        <div class="flex-container">
-          <div class="flex-item" *ngFor="let resepti of recipes">
-            <figure>
-              <img class="img-fluid" id="food-img" src="{{ resepti.image }}">
-              <figcaption>
-                <p id="link-wrap"><a [href]="resepti.url" target="_blank">{{ resepti.title }}</a></p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-
-
+        <app-recipe></app-recipe>
 
 
 

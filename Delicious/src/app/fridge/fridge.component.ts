@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {FoodService} from "../services/food.service";
 import * as _ from 'lodash';
 import {Router} from "@angular/router";
+import {RecipeComponent} from "../recipe/recipe.component";
 
 @Component({
   selector: 'app-fridge',
@@ -10,37 +11,26 @@ import {Router} from "@angular/router";
 })
 export class FridgeComponent implements OnInit {
 
-  private recipeUrl: string = 'https://spoonacular.com/recipes';
-  private recipes: any = [];
+  @ViewChild(RecipeComponent)
+  private resipecomponent: RecipeComponent;
+
   private ingredient: string = '';
   private ingredient2: string = '';
   private ingredient3: string = '';
 
 
-  constructor( private  foodService: FoodService, private router: Router) { }
+  constructor(private  foodService: FoodService, private router: Router) {
+  }
 
-  //private apivastaus: any = [];
 
   getFridgefood = () => {
 
-    this.foodService.getRecipe(this.ingredient);
-    this.router.navigate(['fridge']);
+    this.foodService.setIngredients(`${this.ingredient}, ${this.ingredient2}, ${this.ingredient3}`);
+    this.resipecomponent.getRecipe();
   };
 
 
-
   ngOnInit() {
-    this.foodService.getRecipe('ingredient,ingredient2').subscribe(
-      res =>  {
-       // console.log(res);
-        //console.log(this.recipeUrl+_.kebabCase(res[0].title)+'-'+res[0].id);
-        res.map((resepti) => {
-          resepti.url =  this.recipeUrl+_.kebabCase(resepti.title)+'-'+resepti.id;
-        });
-        console.log(res);
-        this.recipes = res;
-      }
-    )
   }
 
 }

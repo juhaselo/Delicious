@@ -16,9 +16,8 @@ export class RecipeComponent implements OnInit {
   }
 
   private apivastaus: any = [];
-
-  ngOnInit() {
-    this.foodService.getRecipe('milk, sugar').subscribe(
+  public getRecipe = () =>{
+    this.foodService.getRecipe().subscribe(
       res =>  {
         //console.log(res);
         //console.log(this.recipeUrl+_.kebabCase(res[0].title)+'-'+res[0].id);
@@ -29,6 +28,12 @@ export class RecipeComponent implements OnInit {
         this.recipes = res;
       }
     )
+
+  }
+
+  ngOnInit() {
+    this.getRecipe();
+
   }
 
 }
