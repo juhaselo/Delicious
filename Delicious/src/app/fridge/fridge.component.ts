@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FoodService} from "../services/food.service";
 import * as _ from 'lodash';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-fridge',
@@ -16,9 +17,17 @@ export class FridgeComponent implements OnInit {
   private ingredient3: string = '';
 
 
-  constructor( private  foodService: FoodService) { }
+  constructor( private  foodService: FoodService, private router: Router) { }
 
-  private apivastaus: any = [];
+  //private apivastaus: any = [];
+
+  getFridgefood = () => {
+
+    this.foodService.getRecipe(this.ingredient);
+    this.router.navigate(['fridge']);
+  };
+
+
 
   ngOnInit() {
     this.foodService.getRecipe('ingredient,ingredient2').subscribe(
@@ -35,12 +44,3 @@ export class FridgeComponent implements OnInit {
   }
 
 }
-
-
-
-
-
-
-
-
-
