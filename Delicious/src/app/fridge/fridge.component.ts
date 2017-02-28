@@ -1,3 +1,4 @@
+
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {FoodService} from "../services/food.service";
 import * as _ from 'lodash';
@@ -26,11 +27,12 @@ export class FridgeComponent implements OnInit {
   getFridgefood = () => {
 
     this.foodService.setIngredients(`${this.ingredient}, ${this.ingredient2}, ${this.ingredient3}`);
-    this.resipecomponent.getRecipe();
+    this.resipecomponent.getRecipe('aine');
   };
 
 
   ngOnInit() {
+
   }
 
 }

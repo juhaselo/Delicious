@@ -16,23 +16,30 @@ export class RecipeComponent implements OnInit {
   }
 
   private apivastaus: any = [];
-  public getRecipe = () =>{
-    this.foodService.getRecipe().subscribe(
-      res =>  {
-        //console.log(res);
-        //console.log(this.recipeUrl+_.kebabCase(res[0].title)+'-'+res[0].id);
-        res.map((resepti) => {
-          resepti.url =  this.recipeUrl+_.kebabCase(resepti.title)+'-'+resepti.id;
-        });
+  public getRecipe = (aine: string) => {
+    this.foodService.getRecipe(aine).subscribe(
+      res => {
         console.log(res);
-        this.recipes = res;
+        //console.log(this.recipeUrl+_.kebabCase(res[0].title)+'-'+res[0].id);
+
+        if (res.baseUri) {
+          res.results.map((resepti) => {
+            resepti.image = res.baseUri + resepti.image;
+            resepti.url = this.recipeUrl + _.kebabCase(resepti.title) + '-' + resepti.id;
+          });
+          this.recipes = res.results;
+        } else {
+          res.map((resepti) => {
+            resepti.url = this.recipeUrl + _.kebabCase(resepti.title) + '-' + resepti.id;
+          });
+          this.recipes = res;
+        }
       }
     )
 
   }
 
   ngOnInit() {
-    this.getRecipe();
 
   }
 
