@@ -19,6 +19,8 @@ import {RouterModule} from "@angular/router";
 import { FridgeComponent } from './fridge/fridge.component';
 import { ListComponent } from './list/list.component';
 import { OwnComponent } from './own/own.component';
+import {MainpageService} from "./services/mainpage.service";
+import { RandomComponent } from './random/random.component';
 
 const menuConfig = [
   {
@@ -72,7 +74,8 @@ const menuConfig = [
     FridgeComponent,
     SearchComponent,
     ListComponent,
-    OwnComponent
+    OwnComponent,
+    RandomComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +83,7 @@ const menuConfig = [
     HttpModule,
     RouterModule.forRoot(menuConfig)
   ],
-  providers: [FoodService],
+  providers: [FoodService,MainpageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
