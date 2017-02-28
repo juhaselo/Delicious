@@ -1,3 +1,26 @@
-<p>
-  fridge works!
-</p>
+<div class="col">
+  <div class="row">
+    <div class="col">
+      <h3>What ingredients you have to make meal ?</h3>
+
+      <h4>What's in a fridge ?</h4>
+      ingredient<input type="text" [(ngModel)]="ingredient">
+      <br>
+      ingredient<input type="text" [(ngModel)]="ingredient2">
+      <br>
+      ingredient<input type="text" [(ngModel)]="ingredient3">
+      <br>
+      <button (click)="getFridgefood()">Search</button>
+
+    </div>
+    <div class="row">
+      <div class="col">
+
+        <app-recipe></app-recipe>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

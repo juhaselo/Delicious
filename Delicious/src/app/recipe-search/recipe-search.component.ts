@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {RecipeComponent} from "../recipe/recipe.component";
+import {FoodService} from "../services/food.service";
 
 @Component({
   selector: 'app-recipe-search',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeSearchComponent implements OnInit {
 
-  constructor() { }
+  private recipes: any = [];
+  private search: string;
+
+  @ViewChild(RecipeComponent)
+  private resipecomponent: RecipeComponent;
+
+  constructor(private searchService: FoodService) {
+  }
+
+  searchFood = () => {
+    this.searchService.setSearch(this.search);
+    this.resipecomponent.getRecipe('nimi');
+  };
+
 
   ngOnInit() {
   }
 
 }
+
