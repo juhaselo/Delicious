@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class RandomComponent implements OnInit {
 
   constructor() { }
+  // toimiiko
 
   ngOnInit() {
   }
