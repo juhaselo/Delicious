@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {RecipeComponent} from "../recipe/recipe.component";
+import {FoodService} from "../services/food.service";
 
 @Component({
   selector: 'app-random',
@@ -7,10 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RandomComponent implements OnInit {
 
-  constructor() { }
-  // toimiiko
+  private random: string;
+
+  @ViewChild(RecipeComponent)
+  private resipecomponent: RecipeComponent;
+
+
+  constructor(private randomService: FoodService) { }
+
+
+  getRandom = () => {
+    this.randomService.setRandom(this.random);
+    this.resipecomponent.getRecipe('random');
+    console.log(this.random);
+  };
 
   ngOnInit() {
+    this.resipecomponent.getRecipe('random');
   }
 
 }
