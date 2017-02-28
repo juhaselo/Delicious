@@ -16,6 +16,7 @@ import {RouterModule} from "@angular/router";
 import { FridgeComponent } from './fridge/fridge.component';
 import { ListComponent } from './list/list.component';
 import { OwnComponent } from './own/own.component';
+import { RandomComponent } from './random/random.component';
 
 const menuConfig = [
   {
@@ -62,7 +63,8 @@ const menuConfig = [
     FridgeComponent,
     RecipeSearchComponent,
     ListComponent,
-    OwnComponent
+    OwnComponent,
+    RandomComponent
   ],
   imports: [
     BrowserModule,
