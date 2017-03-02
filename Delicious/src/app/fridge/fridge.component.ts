@@ -32,7 +32,6 @@ export class FridgeComponent implements OnInit {
 
 
   ngOnInit() {
-
   }
 
 }

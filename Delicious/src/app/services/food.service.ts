@@ -8,6 +8,11 @@ export class FoodService {
   private url: string = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/';
   private ingredients: string = '';
   private search: string = '';
+  private diet: string;
+  private intolerances: string;
+  private exludeIngredients: string;
+  private cuisine: string;
+  private foodtype: string;
 
   constructor(private http: Http) {
   }
@@ -26,16 +31,16 @@ export class FoodService {
         seppo = 'findByIngredients';
         break;
       case ('nimi'):
-        params.set('cuisine', '');
-        params.set('diet', '');
-        params.set('excludeIngredients', '');
+        params.set('cuisine', this.cuisine);
+        params.set('diet', this.diet);
+        params.set('excludeIngredients', this.exludeIngredients);
         params.set('instructionsRequired', 'false');
-        params.set('intolerances', '');
+        params.set('intolerances', this.intolerances);
         params.set('limitLicense', 'false');
         params.set('number', '25');
         params.set('offset', '0');
         params.set('query', this.search);
-        params.set('type', '');
+        params.set('type', this.foodtype);
         seppo = 'search';
         break;
     }

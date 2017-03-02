@@ -9,8 +9,12 @@ import {FoodService} from "../services/food.service";
 })
 export class RecipeSearchComponent implements OnInit {
 
-  private recipes: any = [];
   private search: string;
+  private diet: string = '';
+  private intolerances: string = '';
+  private exludeIngredients: string = '';
+  private cuisine: string = '';
+  private foodtype: string = '';
 
   @ViewChild(RecipeComponent)
   private resipecomponent: RecipeComponent;
@@ -19,7 +23,7 @@ export class RecipeSearchComponent implements OnInit {
   }
 
   searchFood = () => {
-    this.searchService.setSearch(this.search);
+    this.searchService.setSearch(`${this.search}, ${this.diet}, ${this.intolerances}, ${this.exludeIngredients}, ${this.cuisine}, ${this.foodtype}`);
     this.resipecomponent.getRecipe('nimi');
   };
 
@@ -28,4 +32,3 @@ export class RecipeSearchComponent implements OnInit {
   }
 
 }
-
