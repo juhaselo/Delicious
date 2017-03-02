@@ -9,15 +9,14 @@ export class FoodService {
   private url: string = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/';
   private ingredients: string = '';
   private search: string = '';
-<<<<<<< HEAD
+
   private diet: string;
   private intolerances: string;
   private exludeIngredients: string;
   private cuisine: string;
   private foodtype: string;
-=======
   private random: string = '';
->>>>>>> b2676cb1e5b0890ecb8f4b7130ea0ce2eff70835
+
 
   constructor(private http: Http) {
   }
