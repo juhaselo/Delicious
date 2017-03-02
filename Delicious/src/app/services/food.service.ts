@@ -30,7 +30,7 @@ export class FoodService {
         params.set('fillIngredients', 'false');
         params.set('ingredients', this.ingredients);
         params.set('limitLicense', 'true');
-        params.set('number', '100');
+        params.set('number', '24');
         params.set('ranking', '1');
         seppo = 'findByIngredients';
         break;
@@ -41,7 +41,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', this.intolerances);
         params.set('limitLicense', 'false');
-        params.set('number', '25');
+        params.set('number', '24');
         params.set('offset', '0');
         params.set('query', this.search);
         params.set('type', this.foodtype);
@@ -49,8 +49,8 @@ export class FoodService {
         break;
       case ('randomi'):
         params.set('limitLicense', 'false');
-        params.set('number', '26');
-        params.set('tags', 'african');
+        params.set('number', '24');
+        params.set('tags', 'vegetarian');
         seppo='random';
         break;
     }

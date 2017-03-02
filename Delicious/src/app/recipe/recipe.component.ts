@@ -27,6 +27,12 @@ export class RecipeComponent implements OnInit {
             resepti.url = this.recipeUrl + _.kebabCase(resepti.title) + '-' + resepti.id;
           });
           this.recipes = res.results;
+        } else if (res.recipes) {
+          res.recipes.map((resepti) => {
+            resepti.url = this.recipeUrl + _.kebabCase(resepti.title) + '-' + resepti.id;
+          });
+          this.recipes = res.recipes;
+
         } else {
           res.map((resepti) => {
             resepti.url = this.recipeUrl + _.kebabCase(resepti.title) + '-' + resepti.id;
