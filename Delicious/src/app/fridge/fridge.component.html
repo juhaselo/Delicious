@@ -1,20 +1,53 @@
 <div class="col">
   <div class="row">
     <div class="col">
-      <h3>What ingredients you have to make meal ?</h3>
 
-      <h4>What's in a fridge ?</h4>
-      ingredient<input type="text" [(ngModel)]="ingredient">
-      <br>
-      ingredient<input type="text" [(ngModel)]="ingredient2">
-      <br>
-      ingredient<input type="text" [(ngModel)]="ingredient3">
-      <br>
-      <button (click)="getFridgefood()">Search</button>
+
+
+      <div class="row">
+        <div class="col">
+          <h3>What ingredients you have to make meal ?</h3>
+
+          <h4>What's in a fridge ?</h4>
+
+          <div class="row">
+            <div class="col-4">
+              Ingredient <br><input type="text" [(ngModel)]="ingredient">
+            </div>
+            <div class="col">
+              Ingredient <br><input type="text" [(ngModel)]="ingredient2">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              Ingredient <br><input type="text" [(ngModel)]="ingredient3">
+            </div>
+            <div class="col">
+              Ingredient <br><input type="text" [(ngModel)]="ingredient4">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              Ingredient <br><input type="text" [(ngModel)]="ingredient5">
+            </div>
+            <div class="col">
+              Ingredient <br><input type="text" [(ngModel)]="ingredient6">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <br>
+              <button (click)="getFridgefood()">Search</button>
+            </div>
+          </div>
+
+        </div>
 
     </div>
+
     <div class="row">
       <div class="col">
+
 
         <app-recipe></app-recipe>
 

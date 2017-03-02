@@ -18,6 +18,9 @@ export class FridgeComponent implements OnInit {
   private ingredient: string = '';
   private ingredient2: string = '';
   private ingredient3: string = '';
+  private ingredient4: string = '';
+  private ingredient5: string = '';
+  private ingredient6: string = '';
 
 
   constructor(private  foodService: FoodService, private router: Router) {
@@ -26,7 +29,7 @@ export class FridgeComponent implements OnInit {
 
   getFridgefood = () => {
 
-    this.foodService.setIngredients(`${this.ingredient}, ${this.ingredient2}, ${this.ingredient3}`);
+    this.foodService.setIngredients(`${this.ingredient}, ${this.ingredient2}, ${this.ingredient3}, ${this.ingredient4}, ${this.ingredient5}, ${this.ingredient6}`);
     this.resipecomponent.getRecipe('aine');
   };
 
