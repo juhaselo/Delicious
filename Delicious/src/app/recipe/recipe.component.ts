@@ -15,7 +15,6 @@ export class RecipeComponent implements OnInit {
   constructor(private foodService: FoodService) {
   }
 
-  private apivastaus: any = [];
   public getRecipe = (aine: string) => {
     this.foodService.getRecipe(aine).subscribe(
       res => {

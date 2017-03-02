@@ -3,8 +3,37 @@
   <div class="row">
     <div class="col">
       <h4>Recipe search</h4>
-      <input type="text" [(ngModel)]="search">
-      <button (click)="searchFood()">Search</button>
+      <div class="row">
+        <div class="col-4">
+          Search<br><input type="text" [(ngModel)]="search">
+        </div>
+        <div class="col">
+          Diet<br><input type="text" [(ngModel)]="diet">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          Intolerances<br><input type="text" [(ngModel)]="intolerances">
+        </div>
+        <div class="col">
+          Exlude ingredients<br><input type="text" [(ngModel)]="exludeIngredients">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          Cuisine<br><input type="text" [(ngModel)]="cuisine">
+        </div>
+        <div class="col">
+          Type<br><input type="text" [(ngModel)]="foodtype">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <br>
+          <button (click)="searchFood()">Search</button>
+        </div>
+      </div>
+
     </div>
 
     <div class="row">
