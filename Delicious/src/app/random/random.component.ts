@@ -25,7 +25,7 @@ export class RandomComponent implements OnInit {
   };
 
   ngOnInit() {
-    this.resipecomponent.getRecipe('random');
+
   }
 
 }
