@@ -9,11 +9,15 @@ export class FoodService {
   private url: string = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/';
   private ingredients: string = '';
   private search: string = '';
+<<<<<<< HEAD
   private diet: string;
   private intolerances: string;
   private exludeIngredients: string;
   private cuisine: string;
   private foodtype: string;
+=======
+  private random: string = '';
+>>>>>>> b2676cb1e5b0890ecb8f4b7130ea0ce2eff70835
 
   constructor(private http: Http) {
   }
@@ -44,6 +48,12 @@ export class FoodService {
         params.set('type', this.foodtype);
         seppo = 'search';
         break;
+      case ('randomi'):
+        params.set('limitLicense', 'false');
+        params.set('number', '26');
+        params.set('tags', 'african');
+        seppo='random';
+        break;
     }
     const headers = new Headers({
       'X-Mashape-Key': 'ZEFA47mm54msh2oKbvCiBb4ab9vlp1m6MKjjsnBXRw7vpYgGWB'
@@ -66,5 +76,12 @@ export class FoodService {
     this.search = haku;
     console.log(this.search);
   }
+
+  setRandom = (satunnainen: string) => {
+    this.random = satunnainen;
+    console.log(this.random);
+  }
+
+
 
 }

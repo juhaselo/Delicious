@@ -14,7 +14,6 @@ import { Navbar3Component } from './navbar-3/navbar-3.component';
 import { MainComponent } from './main/main.component';
 import {RouterModule} from "@angular/router";
 import { FridgeComponent } from './fridge/fridge.component';
-import { ListComponent } from './list/list.component';
 import { OwnComponent } from './own/own.component';
 import { RandomComponent } from './random/random.component';
 
@@ -37,17 +36,11 @@ const menuConfig = [
     path: 'search',
     component: RecipeSearchComponent
   },
-  {
-    path: 'list',
-    component: ListComponent
-  },
-  {
+   {
     path: 'own',
     component: OwnComponent
   }
 ];
-
-/* mainpage search fridge list register login */
 
 
 
@@ -62,7 +55,6 @@ const menuConfig = [
     MainComponent,
     FridgeComponent,
     RecipeSearchComponent,
-    ListComponent,
     OwnComponent,
     RandomComponent
   ],
