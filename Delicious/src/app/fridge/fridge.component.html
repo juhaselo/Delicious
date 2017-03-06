@@ -2,10 +2,8 @@
 
         <div class="row">
           <div class="col">
-            <h3>What ingredients you have to make meal ?</h3>
-
             <h4>What's in a fridge ?</h4>
-            <div class="row">
+ <!--          <div class="row">
               <div class="col-4">
                 Ingredient <br><input type="text" [(ngModel)]="ingredient">
               </div>
@@ -34,10 +32,24 @@
                 <br>
                 <button (click)="getFridgefood()">Search</button>
               </div>
-            </div>
+            </div>-->
 
-          </div>
+            <form>
+              <fieldset *ngFor="let ingredient of ingredients">
+                  <div class="row">
+                    <div class="col">
+                  Ingredient <input type="text">
+                    </div>
+                  </div>
+                <br>
+              </fieldset>
 
+            <button class="pull-left btn btn-success" (click)="addNewItem()">Add Field</button>
+            <button class="pull-left btn btn-danger" (click)="removeItem()">Remove Field</button>
+
+
+            <button class="btn-secondary" (click)="getFridgefood()">Search</button>
+            </form>
           <div class="row">
             <div class="col">
 
