@@ -15,6 +15,20 @@ export class RecipeComponent implements OnInit {
   constructor(private foodService: FoodService) {
   }
 
+  setPrefrences = () => {
+
+    localStorage.setItem('foodname',"Instant Pot Hawaiian Chicken");
+    localStorage.setItem('picture',"https://spoonacular.com/recipeImages/instant-pot-hawaiian-chicken-854019.jpg");
+    localStorage.setItem('url',"https://spoonacular.com/recipesinstant-pot-hawaiian-chicken-854019");
+
+
+
+//    localStorage.setItem('recipe',"Instant Pot Hawaiian Chicken");
+  //  this.res[0].title
+
+  };
+
+
   public getRecipe = (aine: string) => {
     this.foodService.getRecipe(aine).subscribe(
       res => {
