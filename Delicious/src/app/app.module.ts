@@ -16,6 +16,10 @@ import {RouterModule} from "@angular/router";
 import { FridgeComponent } from './fridge/fridge.component';
 import { OwnComponent } from './own/own.component';
 import { RandomComponent } from './random/random.component';
+import { SpecialComponent } from './special/special.component';
+import { MealComponent } from './meal/meal.component';
+import { HolidayComponent } from './holiday/holiday.component';
+import { VeganComponent } from './vegan/vegan.component';
 
 const menuConfig = [
   {
@@ -56,7 +60,11 @@ const menuConfig = [
     FridgeComponent,
     RecipeSearchComponent,
     OwnComponent,
-    RandomComponent
+    RandomComponent,
+    SpecialComponent,
+    MealComponent,
+    HolidayComponent,
+    VeganComponent
   ],
   imports: [
     BrowserModule,
