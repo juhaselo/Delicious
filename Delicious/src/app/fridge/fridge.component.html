@@ -34,16 +34,16 @@
               </div>
             </div>-->
 <form #aineet="ngForm" (submit)="getFridgefood(aineet.value)">
-              <fieldset *ngFor="let ingredient of ingredients">
+              <fieldset *ngFor="let ingredient of ingredients; let i = index">
                   <div class="row">
                     <div class="col">
-                  Ingredient <input type="text" ngModel name="ingredients[]">
+                  Ingredient <input type="text" ngModel name="{{i}}">
                     </div>
                   </div>
                 <br>
               </fieldset>
-            <button class="pull-left btn btn-success" (click)="addNewItem()">Add Field</button>
-            <button class="pull-left btn btn-danger" (click)="removeItem()">Remove Field</button>
+            <a class="pull-left btn btn-success" (click)="addNewItem()">Add Field</a>
+            <a class="pull-left btn btn-danger" (click)="removeItem()">Remove Field</a>
 
 
             <button class="btn-secondary" type="submit">Search</button>

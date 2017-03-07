@@ -1,4 +1,3 @@
-
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {FoodService} from "../services/food.service";
 import * as _ from 'lodash';
@@ -27,22 +26,28 @@ export class FridgeComponent implements OnInit {
   constructor(private  foodService: FoodService, private router: Router) {
   }
 
-  addNewItem = () =>{
+  addNewItem = () => {
     var newItemNo = this.ingredients.length + 1;
-    this.ingredients.push({'id': 'ingredient'+newItemNo});
+    this.ingredients.push({'id': 'ingredient' + newItemNo});
     console.log(this.ingredients);
   };
 
-  removeItem = () =>{
+  removeItem = () => {
     var lastItem = this.ingredients.length - 1;
     this.ingredients.splice(lastItem);
     console.log(this.ingredients);
   };
 
   getFridgefood = (lomake) => {
-console.log(lomake);
-   // this.foodService.setIngredients(`${this.ingredients.id}, ${this.ingredient2}, ${this.ingredient3}, ${this.ingredient4}, ${this.ingredient5}, ${this.ingredient6}`);
-    //this.resipecomponent.getRecipe('aine');
+    console.log(lomake);
+    console.log(this.ingredients);
+    let aineet: string = '';
+    for (let i in this.ingredients) {
+      aineet += lomake[i] + ',';
+    }
+    console.log(aineet);
+    this.foodService.setIngredients(aineet);
+    this.resipecomponent.getRecipe('aine');
   };
 
   ngOnInit() {
