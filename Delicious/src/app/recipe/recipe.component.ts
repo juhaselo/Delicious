@@ -11,25 +11,34 @@ export class RecipeComponent implements OnInit {
 
   private recipeUrl: string = 'https://spoonacular.com/recipes';
   private recipes: any = [];
+  private title: any;
+  private image: any;
+  private suosikit = false;
+
 
   constructor(private foodService: FoodService) {
   }
 
-  setPrefrences = () => {
-
-    localStorage.setItem('foodname',"Instant Pot Hawaiian Chicken");
-    localStorage.setItem('picture',"https://spoonacular.com/recipeImages/instant-pot-hawaiian-chicken-854019.jpg");
-    localStorage.setItem('url',"https://spoonacular.com/recipesinstant-pot-hawaiian-chicken-854019");
+  setPrefrences = (resepti) => {
 
 
+    let reseptit = [];
+    if(localStorage.getItem('recipes')!= null){
+      reseptit = JSON.parse (localStorage.getItem('recipes'));
+    }
 
-//    localStorage.setItem('recipe',"Instant Pot Hawaiian Chicken");
-  //  this.res[0].title
+    reseptit.push(resepti);
+    localStorage.setItem('recipes', JSON.stringify(reseptit));
+
+
+
+
 
   };
 
 
   public getRecipe = (aine: string) => {
+    this.suosikit = false;
     this.foodService.getRecipe(aine).subscribe(
       res => {
         console.log(res);
@@ -57,6 +66,13 @@ export class RecipeComponent implements OnInit {
     )
 
   }
+
+  public haeSuosikit = () => {
+    this.recipes = JSON.parse (localStorage.getItem('recipes'));
+    this.suosikit = true;
+
+  }
+
 
   ngOnInit() {
 

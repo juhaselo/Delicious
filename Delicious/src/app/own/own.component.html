@@ -32,6 +32,9 @@
 
 <h1>My own saved recipes :</h1>
 
+<app-recipe></app-recipe>
+
+
 
 <!--
 <p>
@@ -45,3 +48,8 @@ Recipe book name : {{ recipe.recipebookname }}
   User data :  {{recipe.data}}
 </p>
 -->
+
+<form #prefForm="ngForm">
+
+<button onclick="localStorage.clear();">Remove all recipes from favourites</button>
+</form> 

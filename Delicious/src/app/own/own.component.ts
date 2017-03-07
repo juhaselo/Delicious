@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {FoodService} from "../services/food.service";
 import {Router} from "@angular/router";
 import {RecipeComponent} from "../recipe/recipe.component";
@@ -10,13 +10,15 @@ import {RecipeComponent} from "../recipe/recipe.component";
 })
 export class OwnComponent implements OnInit {
 
+  @ViewChild (RecipeComponent)
+  private resipecomponent: RecipeComponent;
   private recipe: any = [];
 
   constructor(private ownService : FoodService, private  router: Router) { }
 
-food =(localStorage.getItem('foodname'));
-picture = (localStorage.getItem('picture'));
-url =(localStorage.getItem('url'));
+//food =(localStorage.getItem('foodname'));
+//picture = (localStorage.getItem('picture'));
+//url =(localStorage.getItem('url'));
 
   //setPrefrences2 = (formValues: any) => {
   // localStorage.setItem('recipe', JSON.stringify(formValues));
@@ -27,16 +29,10 @@ url =(localStorage.getItem('url'));
 
   ngOnInit() {
 
-    //if (localStorage.getItem('recipe') != null) {
 
-      //   this.recipe = JSON.parse(localStorage.getItem('recipe'));
+    this.resipecomponent.haeSuosikit();
 
-
-    //}
   }
 
 }
 
-// image :"https://spoonacular.com/recipeImages/instant-pot-hawaiian-chicken-854019.jpg"
-//title :  "Instant Pot Hawaiian Chicken"
-// url :  "https://spoonacular.com/recipesinstant-pot-hawaiian-chicken-854019"
