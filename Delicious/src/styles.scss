@@ -4,14 +4,21 @@
 
 body {
   font-family: 'Droid Sans', sans-serif;
-  background-color: #f1f6eb;
+  //background-color: #f1f6eb;
+  background-image: url("./img/background.jpg");
+  background-attachment: fixed;
   font-size: 16px;
 }
 
 
 .container{
+  //background-color: #eaeeba;
+  //background-color: #f1f6eb;
+  background: rgba(241, 246, 235, 0.8);
+  margin-top: 65px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
-  background-color: #eaeeba;
 }
 
 #logo{

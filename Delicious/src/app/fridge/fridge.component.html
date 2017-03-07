@@ -37,7 +37,7 @@
               <fieldset *ngFor="let ingredient of ingredients; let i = index">
                   <div class="row">
                     <div class="col">
-                  Ingredient <input type="text" ngModel name="{{i}}">
+                  Ingredient {{1+i}} <input type="text" ngModel name="{{i}}">
                     </div>
                   </div>
                 <br>
@@ -48,6 +48,7 @@
 
             <button class="btn-secondary" type="submit">Search</button>
 </form>
+            <br>
           <div class="row">
             <div class="col">
 
