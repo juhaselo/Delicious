@@ -33,23 +33,21 @@
                 <button (click)="getFridgefood()">Search</button>
               </div>
             </div>-->
-
-            <form>
+<form #aineet="ngForm" (submit)="getFridgefood(aineet.value)">
               <fieldset *ngFor="let ingredient of ingredients">
                   <div class="row">
                     <div class="col">
-                  Ingredient <input type="text">
+                  Ingredient <input type="text" ngModel name="ingredients[]">
                     </div>
                   </div>
                 <br>
               </fieldset>
-
             <button class="pull-left btn btn-success" (click)="addNewItem()">Add Field</button>
             <button class="pull-left btn btn-danger" (click)="removeItem()">Remove Field</button>
 
 
-            <button class="btn-secondary" (click)="getFridgefood()">Search</button>
-            </form>
+            <button class="btn-secondary" type="submit">Search</button>
+</form>
           <div class="row">
             <div class="col">
 

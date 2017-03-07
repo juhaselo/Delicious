@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {FoodService} from "../services/food.service";
+import {Router} from "@angular/router";
+import {RecipeComponent} from "../recipe/recipe.component";
 
 @Component({
   selector: 'app-own',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OwnComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild (RecipeComponent)
+  private resipecomponent: RecipeComponent;
+  private recipe: any = [];
+
+  constructor(private ownService : FoodService, private  router: Router) { }
 
   ngOnInit() {
+
+
+    this.resipecomponent.haeSuosikit();
+
   }
 
 }
+

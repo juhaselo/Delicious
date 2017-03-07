@@ -11,11 +11,34 @@ export class RecipeComponent implements OnInit {
 
   private recipeUrl: string = 'https://spoonacular.com/recipes';
   private recipes: any = [];
+  private title: any;
+  private image: any;
+  private suosikit = false;
+
 
   constructor(private foodService: FoodService) {
   }
 
+  setPrefrences = (resepti) => {
+
+
+    let reseptit = [];
+    if(localStorage.getItem('recipes')!= null){
+      reseptit = JSON.parse (localStorage.getItem('recipes'));
+    }
+
+    reseptit.push(resepti);
+    localStorage.setItem('recipes', JSON.stringify(reseptit));
+
+
+
+
+
+  };
+
+
   public getRecipe = (aine: string) => {
+    this.suosikit = false;
     this.foodService.getRecipe(aine).subscribe(
       res => {
         console.log(res);
@@ -43,6 +66,13 @@ export class RecipeComponent implements OnInit {
     )
 
   }
+
+  public haeSuosikit = () => {
+    this.recipes = JSON.parse (localStorage.getItem('recipes'));
+    this.suosikit = true;
+
+  }
+
 
   ngOnInit() {
 

@@ -15,7 +15,7 @@ export class FridgeComponent implements OnInit {
   @ViewChild(RecipeComponent)
   private resipecomponent: RecipeComponent;
 
-  ingredients: any = [{id: 'ingredient1'}, {id: 'ingredient2'}];
+  ingredients: any = [{id: 'ingredient1'}];
 
   private ingredient1: string = '';
   private ingredient2: string = '';
@@ -39,10 +39,10 @@ export class FridgeComponent implements OnInit {
     console.log(this.ingredients);
   };
 
-  getFridgefood = () => {
-
-    this.foodService.setIngredients(`${this.ingredients[0]}, ${this.ingredient2}, ${this.ingredient3}, ${this.ingredient4}, ${this.ingredient5}, ${this.ingredient6}`);
-    this.resipecomponent.getRecipe('aine');
+  getFridgefood = (lomake) => {
+console.log(lomake);
+   // this.foodService.setIngredients(`${this.ingredients.id}, ${this.ingredient2}, ${this.ingredient3}, ${this.ingredient4}, ${this.ingredient5}, ${this.ingredient6}`);
+    //this.resipecomponent.getRecipe('aine');
   };
 
   ngOnInit() {
