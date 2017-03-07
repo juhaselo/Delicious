@@ -16,17 +16,6 @@ export class OwnComponent implements OnInit {
 
   constructor(private ownService : FoodService, private  router: Router) { }
 
-//food =(localStorage.getItem('foodname'));
-//picture = (localStorage.getItem('picture'));
-//url =(localStorage.getItem('url'));
-
-  //setPrefrences2 = (formValues: any) => {
-  // localStorage.setItem('recipe', JSON.stringify(formValues));
-  // localStorage.setItem('recipe',"Instant Pot Hawaiian Chicken");
-  // this.recipe = formValues;
-
-   //};
-
   ngOnInit() {
 
 
