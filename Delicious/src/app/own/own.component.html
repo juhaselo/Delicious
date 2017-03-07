@@ -1,55 +1,8 @@
-<!--<form #prefForm="ngForm" (ngSubmit)="setPrefrences2(prefForm.value)">
-  <p>
-    <label>
-      Name to your recipe book.
-      <input type="text" name="recipebookname" ngModel>
-   </label>
-    </p>
-  <p>
-    <label>
-      What is you name
-      <input type="text" name="username" ngModel>
-    </label>
-
-  </p>
-  <p>
-    <label>
-      Notes :
-      <input type="text" name="notes" ngModel>
-    </label>
-
-  </p>
-  <p>
-    <label>
-      User data :
-      <input type="text" name="data" ngModel>
-    </label>
-  </p>
-  <button type="submit">Save recipe</button>
-  <button onclick="localStorage.clear();">Remove all recipes</button>
-</form> -->
-
-
 <h1>My own saved recipes :</h1>
 
 <app-recipe></app-recipe>
 
-
-
-<!--
-<p>
-    <br>
-Recipe book name : {{ recipe.recipebookname }}
-  <br>
- User name : {{recipe.username}}
-  <br>
-  Notes : {{recipe.notes}}
-  <br>
-  User data :  {{recipe.data}}
-</p>
--->
-
 <form #prefForm="ngForm">
 
 <button onclick="localStorage.clear();">Remove all recipes from favourites</button>
-</form> 
+</form>
