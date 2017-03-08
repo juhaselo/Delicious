@@ -21,6 +21,24 @@ body {
 
 }
 
+/*  Button styles */
+
+.btn-primary {
+  background: #f1f6eb;
+  color: #11032d;
+}
+
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background: #32d69a;
+}
+
+.btn-primary:active, .btn-primary.active {
+  background: #32d69a;
+  box-shadow: none;
+}
+
+
 #logo{
   height: 140px;
   width: 140px;
