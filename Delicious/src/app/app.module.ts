@@ -43,6 +43,10 @@ const menuConfig = [
    {
     path: 'own',
     component: OwnComponent
+  },
+  {
+    path: 'special',
+    component: SpecialComponent
   }
 ];
 
