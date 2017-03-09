@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {RecipeComponent} from "../recipe/recipe.component";
+import {FoodService} from "../services/food.service";
 
 @Component({
   selector: 'app-special',
@@ -7,7 +9,49 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpecialComponent implements OnInit {
 
-  constructor() { }
+  private special: string;
+
+  @ViewChild (RecipeComponent)
+  private resipecomponent: RecipeComponent;
+
+  constructor(private specialService:FoodService ) { }
+
+  getGlutenfree = () => {
+    this.specialService.setGlutenfree(this.special);
+    this.resipecomponent.getRecipe('glutenfree');
+
+  };
+
+  getHealthy = () => {
+    this.specialService.setHealthy(this.special);
+    this.resipecomponent.getRecipe('healthy');
+
+  };
+
+  getLactosefree = () => {
+    this.specialService.setSLactosefree(this.special);
+    this.resipecomponent.getRecipe('lactosefree');
+
+  };
+
+  getPaleo = () => {
+    this.specialService.setPaelo(this.special);
+    this.resipecomponent.getRecipe('paleo');
+
+  };
+
+  getSugarfree = () => {
+    this.specialService.setSugarfree(this.special);
+    this.resipecomponent.getRecipe('sugarfree');
+
+  };
+
+  getFatfree = () => {
+    this.specialService.setFatfree(this.special);
+    this.resipecomponent.getRecipe('fatfree');
+
+  };
+
 
   ngOnInit() {
   }

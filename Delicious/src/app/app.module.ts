@@ -51,6 +51,14 @@ const menuConfig = [
     path: 'holiday',
     component: HolidayComponent
   }
+  ,{
+    path: 'meal',
+    component: MealComponent
+  },
+  {
+    path: 'vegan',
+    component: VeganComponent
+  }
 ];
 
 

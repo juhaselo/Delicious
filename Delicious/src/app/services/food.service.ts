@@ -60,6 +60,84 @@ export class FoodService {
         params.set('tags', 'christmas');
         seppo='random';
         break;
+      case ('glutenfree'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'gluten-free');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('healthy'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'healthy');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('lactosefree'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'dairy-free');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('paleo'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'paleo');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('fatfree'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'fat-free');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('sugarfree'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'sugar-free');
+        params.set('type', '');
+        seppo = 'search';
+        break;
     }
     const headers = new Headers({
       'X-Mashape-Key': 'ZEFA47mm54msh2oKbvCiBb4ab9vlp1m6MKjjsnBXRw7vpYgGWB'
@@ -91,7 +169,29 @@ export class FoodService {
     this.holiday = loma;
     console.log(this.holiday);
   }
+  setGlutenfree = (glutenfree: string) => {
+    this.holiday = glutenfree;
 
+  }
+  setHealthy = (healthy: string) => {
+    this.holiday = healthy;
+
+  }
+  setSLactosefree = (lactosefree: string) => {
+    this.holiday = lactosefree;
+
+  }
+  setPaelo = (paleo: string) => {
+    this.holiday = paleo;
+  }
+
+  setFatfree = (fatfree: string) => {
+    this.holiday = fatfree;
+  }
+
+  setSugarfree = (sugarfree: string) => {
+    this.holiday = sugarfree;
+  }
 
 
 }
