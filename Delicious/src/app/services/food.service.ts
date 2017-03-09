@@ -37,6 +37,8 @@ export class FoodService {
   private dinner: string = '';
   private supper: string = '';
 
+  private vegan: string ='';
+
 
 
   constructor(private http: Http) {
@@ -296,6 +298,19 @@ export class FoodService {
         seppo = 'search';
         break;
       case ('supper'):
+      params.set('cuisine', '');
+      params.set('diet', '');
+      params.set('excludeIngredients', '');
+      params.set('instructionsRequired', 'false');
+      params.set('intolerances', '');
+      params.set('limitLicense', 'false');
+      params.set('number', '24');
+      params.set('offset', '0');
+      params.set('query', 'supper');
+      params.set('type', '');
+      seppo = 'search';
+      break;
+      case ('vegan'):
         params.set('cuisine', '');
         params.set('diet', '');
         params.set('excludeIngredients', '');
@@ -304,7 +319,7 @@ export class FoodService {
         params.set('limitLicense', 'false');
         params.set('number', '24');
         params.set('offset', '0');
-        params.set('query', 'supper');
+        params.set('query', 'vegan');
         params.set('type', '');
         seppo = 'search';
         break;
@@ -381,23 +396,27 @@ export class FoodService {
   }
 
   setBreakfast = (breakfast: string) => {
-    this.sugarfree = breakfast;
+    this.breakfast = breakfast;
   }
 
   setLunc = (lunc: string) => {
-    this.sugarfree = lunc;
+    this.lunc = lunc;
   }
 
   setSnack = (snack: string) => {
-    this.sugarfree = snack;
+    this.snack = snack;
   }
 
   setDinner = (dinner: string) => {
-    this.sugarfree = dinner;
+    this.dinner = dinner;
   }
 
   setSupper= (supper: string) => {
-    this.sugarfree = supper;
+    this.supper = supper;
+  }
+
+  setVegan= (vegan: string) => {
+    this.vegan = vegan;
   }
 
 
