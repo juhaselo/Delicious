@@ -9,3 +9,9 @@
 ul li {
   margin-right: 145px;
 }
+
+@media screen and (max-width: 1178px) {
+  ul li {
+    margin-right: 72.5px;
+  }
+}

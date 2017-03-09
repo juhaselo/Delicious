@@ -10,7 +10,6 @@ import { RecipeComponent } from './recipe/recipe.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { Navbar2Component } from './navbar-2/navbar-2.component';
 import { FooterComponent } from './footer/footer.component';
-import { Navbar3Component } from './navbar-3/navbar-3.component';
 import { MainComponent } from './main/main.component';
 import {RouterModule} from "@angular/router";
 import { FridgeComponent } from './fridge/fridge.component';
@@ -63,7 +62,6 @@ const menuConfig = [
     NavbarComponent,
     Navbar2Component,
     FooterComponent,
-    Navbar3Component,
     MainComponent,
     FridgeComponent,
     RecipeSearchComponent,

@@ -26,11 +26,14 @@ body {
 .btn-primary {
   background: #f1f6eb;
   color: #11032d;
+  border: 1px solid #32d69a;
+
 }
 
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
   background: #32d69a;
+  border: 1px solid #32d69a;
 }
 
 .btn-primary:active, .btn-primary.active {
@@ -38,10 +41,8 @@ body {
   box-shadow: none;
 }
 
-
-#logo{
-  height: 140px;
-  width: 140px;
+#space{
+  padding-top: 5px;
 }
 
 #food-img{
@@ -89,6 +90,12 @@ figcaption p {
   text-align: center;
 }
 
+input {
+  border-radius: 4px;
+  width: 200px;
+  height: 37px;
+}
+
 /*Colors in Palette
 Color Hex RGB
 #f1f6eb
@@ -97,3 +104,9 @@ Color Hex RGB
 #015f57
 #11032d
 */
+@media screen and (max-width: 991px) {
+  .container {
+    margin-top: 50px;
+  }
+}
+
