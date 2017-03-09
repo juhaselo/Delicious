@@ -24,6 +24,14 @@ export class FoodService {
   private patrick: string = '';
   private thanksgiving: string = '';
 
+  private glutenfree: string = '';
+  private healthy: string = '';
+  private lactosefree: string = '';
+  private paleo: string = '';
+  private fatfree: string = '';
+  private sugarfree: string = '';
+
+
 
   constructor(private http: Http) {
   }
@@ -278,27 +286,27 @@ export class FoodService {
     this.thanksgiving = ty;
   }
   setGlutenfree = (glutenfree: string) => {
-    this.holiday = glutenfree;
+    this.glutenfree = glutenfree;
 
   }
   setHealthy = (healthy: string) => {
-    this.holiday = healthy;
+    this.healthy= healthy;
 
   }
   setSLactosefree = (lactosefree: string) => {
-    this.holiday = lactosefree;
+    this.lactosefree= lactosefree;
 
   }
   setPaelo = (paleo: string) => {
-    this.holiday = paleo;
+  this.paleo = paleo;
   }
 
   setFatfree = (fatfree: string) => {
-    this.holiday = fatfree;
+  this.fatfree = fatfree;
   }
 
   setSugarfree = (sugarfree: string) => {
-    this.holiday = sugarfree;
+   this.sugarfree = sugarfree;
   }
 
 
