@@ -16,7 +16,13 @@ export class FoodService {
   private cuisine: string;
   private foodtype: string;
   private random: string = '';
-  private holiday: string = '';
+  private christmas: string = '';
+  private halloween: string = '';
+  private easter: string = '';
+  private newyear: string = '';
+  private valentine: string = '';
+  private patrick: string = '';
+  private thanksgiving: string = '';
 
 
   constructor(private http: Http) {
@@ -54,11 +60,96 @@ export class FoodService {
         params.set('tags', '');
         seppo='random';
         break;
-      case ('holiday'):
+      case ('xmas'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
         params.set('limitLicense', 'false');
         params.set('number', '24');
-        params.set('tags', 'christmas');
-        seppo='random';
+        params.set('offset', '0');
+        params.set('query', 'christmas');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('pumpkin'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'halloween');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('bunny'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'easter');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('year'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'new year');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('valday'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'valentine');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('patricks'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'patrick');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('thanks'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'thanksgiving');
+        params.set('type', '');
+        seppo = 'search';
         break;
     }
     const headers = new Headers({
@@ -87,9 +178,26 @@ export class FoodService {
     this.random = satunnainen;
     console.log(this.random);
   }
-  setHoliday = (loma: string) => {
-    this.holiday = loma;
-    console.log(this.holiday);
+  setChristmas = (xmas: string) => {
+    this.christmas = xmas;
+  }
+  setHalloween = (hween: string) => {
+    this.halloween = hween;
+  }
+  setEaster = (easterr: string) => {
+    this.easter = easterr;
+  }
+  setNewyear = (newy: string) => {
+    this.newyear = newy;
+  }
+  setValentine = (val: string) => {
+    this.valentine = val;
+  }
+  setPatrick = (pat: string) => {
+    this.patrick = pat;
+  }
+  setThanksgiving = (ty: string) => {
+    this.thanksgiving = ty;
   }
 
 

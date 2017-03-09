@@ -9,19 +9,53 @@ import {RecipeComponent} from "../recipe/recipe.component";
 })
 export class HolidayComponent implements OnInit {
 
-  private holiday: string;
+  private christmas: string;
+  private halloween: string;
+  private easter: string;
+  private newyear: string;
+  private valentine: string;
+  private patrick: string;
+  private thanksgiving: string;
 
   @ViewChild(RecipeComponent)
   private resipecomponent: RecipeComponent;
 
   constructor(private holidayService: FoodService) {}
 
-  getHoliday = () => {
-    this.holidayService.setHoliday(this.holiday);
-    this.resipecomponent.getRecipe('holiday');
-    console.log(this.holiday);
+  getChristmas = () => {
+    this.holidayService.setChristmas(this.christmas);
+    this.resipecomponent.getRecipe('xmas');
   };
 
+  getHalloween = () => {
+    this.holidayService.setHalloween(this.halloween);
+    this.resipecomponent.getRecipe('pumpkin');
+  };
+
+  getEaster = () => {
+    this.holidayService.setEaster(this.easter);
+    this.resipecomponent.getRecipe('bunny');
+  };
+
+  getNewyear = () => {
+    this.holidayService.setNewyear(this.newyear);
+    this.resipecomponent.getRecipe('year');
+  };
+
+  getValentine = () => {
+    this.holidayService.setValentine(this.valentine);
+    this.resipecomponent.getRecipe('valday');
+  };
+
+  getPatrick = () => {
+    this.holidayService.setPatrick(this.patrick);
+    this.resipecomponent.getRecipe('patricks');
+  };
+
+  getThanksgiving = () => {
+    this.holidayService.setThanksgiving(this.thanksgiving);
+    this.resipecomponent.getRecipe('thanks');
+  };
   ngOnInit() {
   }
 

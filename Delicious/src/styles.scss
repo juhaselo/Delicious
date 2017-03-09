@@ -41,6 +41,12 @@ body {
   box-shadow: none;
 }
 
+.btn-link, .btn-link:focus, .btn-link:active{
+  color: #11032d;
+  width: 135px;
+  outline: none;
+  text-align: left;
+}
 #space{
   padding-top: 5px;
 }
