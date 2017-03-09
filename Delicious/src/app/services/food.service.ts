@@ -31,6 +31,12 @@ export class FoodService {
   private fatfree: string = '';
   private sugarfree: string = '';
 
+  private breakfast: string = '';
+  private lunc: string = '';
+  private snack: string = '';
+  private dinner: string = '';
+  private supper: string = '';
+
 
 
   constructor(private http: Http) {
@@ -237,6 +243,71 @@ export class FoodService {
         params.set('type', '');
         seppo = 'search';
         break;
+      case ('breakfast'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'Breakfast');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('lunch'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'Lunch');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('snack'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'Snack');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('dinner'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'Dinner');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('supper'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('offset', '0');
+        params.set('query', 'supper');
+        params.set('type', '');
+        seppo = 'search';
+        break;
     }
     const headers = new Headers({
       'X-Mashape-Key': 'ZEFA47mm54msh2oKbvCiBb4ab9vlp1m6MKjjsnBXRw7vpYgGWB'
@@ -307,6 +378,26 @@ export class FoodService {
 
   setSugarfree = (sugarfree: string) => {
    this.sugarfree = sugarfree;
+  }
+
+  setBreakfast = (breakfast: string) => {
+    this.sugarfree = breakfast;
+  }
+
+  setLunc = (lunc: string) => {
+    this.sugarfree = lunc;
+  }
+
+  setSnack = (snack: string) => {
+    this.sugarfree = snack;
+  }
+
+  setDinner = (dinner: string) => {
+    this.sugarfree = dinner;
+  }
+
+  setSupper= (supper: string) => {
+    this.sugarfree = supper;
   }
 
 
