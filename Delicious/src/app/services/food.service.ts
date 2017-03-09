@@ -16,6 +16,7 @@ export class FoodService {
   private cuisine: string;
   private foodtype: string;
   private random: string = '';
+  private holiday: string = '';
 
 
   constructor(private http: Http) {
@@ -50,7 +51,13 @@ export class FoodService {
       case ('randomi'):
         params.set('limitLicense', 'false');
         params.set('number', '24');
-        params.set('tags', 'vegetarian');
+        params.set('tags', '');
+        seppo='random';
+        break;
+      case ('holiday'):
+        params.set('limitLicense', 'false');
+        params.set('number', '24');
+        params.set('tags', 'christmas');
         seppo='random';
         break;
     }
@@ -79,6 +86,10 @@ export class FoodService {
   setRandom = (satunnainen: string) => {
     this.random = satunnainen;
     console.log(this.random);
+  }
+  setHoliday = (loma: string) => {
+    this.holiday = loma;
+    console.log(this.holiday);
   }
 
 

@@ -1,8 +1,11 @@
-<h2>Breakfast</h2>
-<h2> Lunch</h2>
-<h2>Snack</h2>
-<h2>Dinner</h2>
-<h2>Supper</h2>
-<h2>Christmas</h2>
-<h2>Halloween</h2>
-<h2>Easter</h2>
+<div class="row">
+  <div class="col-2">
+
+    <button (click)="getHoliday()">Christmas</button>
+    <h4>Halloween</h4>
+    <h4>Easter</h4>
+  </div>
+  <div class="col">
+    <app-recipe></app-recipe>
+  </div>
+</div>
