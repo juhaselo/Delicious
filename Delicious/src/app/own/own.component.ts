@@ -22,6 +22,9 @@ export class OwnComponent implements OnInit {
     this.resipecomponent.haeSuosikit();
 
   }
-
+private remove = () =>{
+  localStorage.clear();
+  this.resipecomponent.poistaSuosikit();
+}
 }
 

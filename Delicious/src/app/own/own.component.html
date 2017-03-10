@@ -4,5 +4,5 @@
 
 <form #prefForm="ngForm">
 
-  <button class="btn btn-primary" onclick="localStorage.clear();history.go(0);" value="Reload Page">Remove all favorite recipes</button>
+  <button class="btn btn-primary" (click)="remove()" value="Reload Page">Remove all favorite recipes</button>
 </form>

@@ -69,6 +69,11 @@ export class RecipeComponent implements OnInit {
 
   }
 
+  public poistaSuosikit = () => {
+    this.recipes = null;
+    this.suosikit = false;
+
+  }
 
   ngOnInit() {
 
