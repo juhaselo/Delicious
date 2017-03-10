@@ -10,6 +10,9 @@ import {RecipeComponent} from "../recipe/recipe.component";
 export class VeganComponent implements OnInit {
 
   private vegan: string;
+  private ovo: string;
+  private lacto: string;
+  private pesca: string;
 
   @ViewChild (RecipeComponent)
   private resipecomponent: RecipeComponent;
@@ -22,6 +25,21 @@ export class VeganComponent implements OnInit {
   getVegan = () => {
     this.veganService.setVegan(this.vegan);
     this.resipecomponent.getRecipe('vegan');
+  };
+
+  getOvo = () => {
+    this.veganService.setOvo(this.ovo);
+    this.resipecomponent.getRecipe('ovo');
+  };
+
+  getLacto = () => {
+    this.veganService.setLacto(this.lacto);
+    this.resipecomponent.getRecipe('lacto');
+  };
+
+  getPesca = () => {
+    this.veganService.setPesca(this.pesca);
+    this.resipecomponent.getRecipe('pesca');
   };
 
 }

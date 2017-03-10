@@ -15,7 +15,9 @@ export class FoodService {
   private exludeIngredients: string;
   private cuisine: string;
   private foodtype: string;
+
   private random: string = '';
+
   private christmas: string = '';
   private halloween: string = '';
   private easter: string = '';
@@ -38,6 +40,9 @@ export class FoodService {
   private supper: string = '';
 
   private vegan: string ='';
+  private ovo: string = '';
+  private lacto: string = '';
+  private pesca: string = '';
 
 
 
@@ -53,7 +58,7 @@ export class FoodService {
         params.set('fillIngredients', 'false');
         params.set('ingredients', this.ingredients);
         params.set('limitLicense', 'true');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('ranking', '1');
         seppo = 'findByIngredients';
         break;
@@ -64,7 +69,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', this.intolerances);
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', this.search);
         params.set('type', this.foodtype);
@@ -83,7 +88,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'christmas');
         params.set('type', '');
@@ -96,7 +101,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'halloween');
         params.set('type', '');
@@ -109,7 +114,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'easter');
         params.set('type', '');
@@ -122,7 +127,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'new year');
         params.set('type', '');
@@ -135,7 +140,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'valentine');
         params.set('type', '');
@@ -148,7 +153,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'patrick');
         params.set('type', '');
@@ -161,7 +166,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'thanksgiving');
         params.set('type', '');
@@ -174,7 +179,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'gluten-free');
         params.set('type', '');
@@ -187,7 +192,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'healthy');
         params.set('type', '');
@@ -200,7 +205,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'dairy-free');
         params.set('type', '');
@@ -213,7 +218,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'paleo');
         params.set('type', '');
@@ -226,7 +231,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'fat-free');
         params.set('type', '');
@@ -239,7 +244,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'sugar-free');
         params.set('type', '');
@@ -252,7 +257,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'Breakfast');
         params.set('type', '');
@@ -265,7 +270,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'Lunch');
         params.set('type', '');
@@ -278,7 +283,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'Snack');
         params.set('type', '');
@@ -291,7 +296,7 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'Dinner');
         params.set('type', '');
@@ -304,7 +309,7 @@ export class FoodService {
       params.set('instructionsRequired', 'false');
       params.set('intolerances', '');
       params.set('limitLicense', 'false');
-      params.set('number', '24');
+      params.set('number', '99');
       params.set('offset', '0');
       params.set('query', 'supper');
       params.set('type', '');
@@ -317,9 +322,48 @@ export class FoodService {
         params.set('instructionsRequired', 'false');
         params.set('intolerances', '');
         params.set('limitLicense', 'false');
-        params.set('number', '24');
+        params.set('number', '99');
         params.set('offset', '0');
         params.set('query', 'vegan');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('ovo'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '99');
+        params.set('offset', '0');
+        params.set('query', 'ovo vegetarian');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('lacto'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '99');
+        params.set('offset', '0');
+        params.set('query', 'lacto vegetarian');
+        params.set('type', '');
+        seppo = 'search';
+        break;
+      case ('pesca'):
+        params.set('cuisine', '');
+        params.set('diet', '');
+        params.set('excludeIngredients', '');
+        params.set('instructionsRequired', 'false');
+        params.set('intolerances', '');
+        params.set('limitLicense', 'false');
+        params.set('number', '99');
+        params.set('offset', '0');
+        params.set('query', 'pescatarian');
         params.set('type', '');
         seppo = 'search';
         break;
@@ -417,6 +461,18 @@ export class FoodService {
 
   setVegan= (vegan: string) => {
     this.vegan = vegan;
+  }
+
+  setOvo= (ovo: string) => {
+    this.ovo = ovo;
+  }
+
+  setLacto= (lacto: string) => {
+    this.lacto = lacto;
+  }
+
+  setPesca= (pesca: string) => {
+    this.pesca = pesca;
   }
 
 
