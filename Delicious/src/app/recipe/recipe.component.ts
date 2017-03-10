@@ -30,7 +30,7 @@ export class RecipeComponent implements OnInit {
     reseptit.push(resepti);
     localStorage.setItem('recipes', JSON.stringify(reseptit));
 
-
+    alert("Added to favourites");
 
 
 
