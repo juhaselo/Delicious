@@ -1,13 +1,12 @@
 <div class="row">
   <div class="col">
-
-    <a [routerLink]="['special']" class="button">Special diet</a>
-
-    <a [routerLink]="['meal']" class="button">Meals</a>
-
-    <a [routerLink]="['holiday']" class="button">Holidays</a>
-
-    <a [routerLink]="['vegan']"class="button">Vegan</a>
-
+    <div class="btn-group">
+      <a [routerLink]="['special']" class="button">Special diet</a>
+      <a [routerLink]="['meal']" class="button" style="margin-left: 3px">Meals</a>
+    </div>
+    <div class="btn-group">
+      <a [routerLink]="['holiday']" class="button">Holidays</a>
+      <a [routerLink]="['vegan']" class="button" style="margin-left: 3px">Vegan</a>
+    </div>
   </div>
 </div>
